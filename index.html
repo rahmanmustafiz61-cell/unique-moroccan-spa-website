@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Moroccan Spa & Beauty Clinic — Revesby, Sydney</title>
+<meta name="description" content="A Moroccan Ritual, A Sydney Address. Private, female-owned beauty destination in Revesby — Moroccan Hammam, Laser & Skin Clinic, Japanese Head Spa, Hair Salon, Permanent Jewellery and Smoothie Bar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@400;500;600&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EF;
+    --cream-deep:#F1E9DA;
+    --ink:#232120;
+    --terracotta:#C96F3B;
+    --teal:#1F4A5E;
+    --gold:#B99256;
+    --line: rgba(35,33,32,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Karla', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:64px;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:500; line-height:1.15;}
+  img{display:block; max-width:100%; height:auto;}
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.8rem;
+    font-weight:600;
+    color:var(--terracotta);
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  /* Nav */
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px; max-width:1180px; margin:0 auto;
+    position:sticky; top:0; background:var(--cream); z-index:50;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{width:46px; height:46px; border-radius:50%;}
+  .logo{font-family:'Fraunces', serif; font-size:1.5rem;}
+  .logo b{color:var(--terracotta); font-weight:600;}
+  .navlinks{display:flex; gap:32px; font-family:'Jost',sans-serif; font-size:0.95rem; letter-spacing:0.03em; font-weight:500;}
+  .book-btn{
+    background:var(--terracotta); color:var(--cream);
+    padding:10px 22px; border-radius:2px;
+    font-family:'Jost',sans-serif; font-size:0.8rem; letter-spacing:0.05em; text-transform:uppercase;
+  }
+
+  /* Quick service pills */
+  .quicknav{
+    display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+    padding:16px 32px; background:var(--cream-deep); border-bottom:1px solid var(--line);
+    font-family:'Jost',sans-serif; font-size:0.85rem; letter-spacing:0.03em;
+  }
+  .quicknav a{
+    background:var(--cream); border:1px solid var(--line); border-radius:20px;
+    padding:10px 18px; white-space:nowrap;
+  }
+  .quicknav a:hover{border-color:var(--terracotta); color:var(--terracotta);}
+
+  /* HERO — full-bleed real photography */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    padding:0 32px 130px;
+    overflow:hidden;
+  }
+  .hero-media{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 30%; z-index:0;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(13,20,24,0.45) 0%, rgba(13,20,24,0.35) 45%, rgba(13,20,24,0.8) 100%);
+    pointer-events:none;
+  }
+  .hero-content{position:relative; z-index:2; max-width:760px;}
+  .hero-content .eyebrow{color:var(--gold); margin-bottom:20px; display:block; font-size:0.85rem; letter-spacing:0.24em;}
+  .hero-content h1{
+    color:var(--cream); font-size:clamp(2.8rem,5.5vw,4.4rem);
+    margin-bottom:22px; text-shadow:0 4px 30px rgba(0,0,0,0.45);
+  }
+  .hero-content p{
+    color:rgba(250,246,239,0.95); max-width:46ch; margin:0 auto;
+    font-size:1.2rem; text-shadow:0 2px 16px rgba(0,0,0,0.4);
+  }
+
+  .booking-bar{
+    position:relative; z-index:3;
+    margin-top:44px;
+    background:rgba(250,246,239,0.97);
+    backdrop-filter:blur(6px);
+    border-radius:10px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    padding:22px 26px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr auto;
+    gap:0;
+    max-width:920px;
+    width:100%;
+    align-items:stretch;
+  }
+  .booking-field{
+    padding:0 22px;
+    border-right:1px solid var(--line);
+    text-align:left;
+  }
+  .booking-field:last-of-type{border-right:none;}
+  .booking-field label{
+    display:block; font-family:'Jost',sans-serif; font-size:0.7rem; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--terracotta); margin-bottom:6px; font-weight:600;
+  }
+  .booking-field select, .booking-field input{
+    border:none; background:none; font-family:'Karla',sans-serif; font-size:0.98rem;
+    color:var(--ink); width:100%; padding:2px 0;
+  }
+  .booking-field select:focus, .booking-field input:focus{outline:none;}
+  .booking-bar button{
+    background:var(--terracotta); color:var(--cream); border:none;
+    padding:0 30px; border-radius:6px; font-family:'Jost',sans-serif; font-size:0.85rem;
+    letter-spacing:0.05em; text-transform:uppercase; cursor:pointer; white-space:nowrap;
+  }
+  .hero-trust{
+    position:relative; z-index:3; margin-top:26px;
+    display:flex; gap:32px; flex-wrap:wrap; justify-content:center;
+    font-family:'Jost',sans-serif; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:rgba(250,246,239,0.92);
+  }
+  .hero-trust div{display:flex; align-items:center; gap:8px;}
+  .hero-trust .dot{width:5px; height:5px; border-radius:50%; background:var(--gold);}
+
+  /* Intro strip */
+  .intro{text-align:center; max-width:720px; margin:70px auto 0; padding:0 32px;}
+  .intro p{font-size:1.12rem; color:rgba(35,33,32,0.82);}
+
+  /* Services */
+  .services{padding:70px 32px 30px; max-width:1180px; margin:0 auto;}
+  .services-head{text-align:center; max-width:600px; margin:0 auto 46px;}
+  .services-head h2{font-size:clamp(2.4rem,4vw,3.4rem); margin-top:14px;}
+  .s-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .s-card{
+    background:var(--cream-deep); border-radius:8px; overflow:hidden;
+    border:1px solid var(--line); transition:transform .2s ease;
+    display:flex; flex-direction:column;
+  }
+  .s-card:hover{transform:translateY(-4px);}
+  .s-card.featured{grid-column:span 2;}
+  .s-thumb{
+    height:230px; position:relative; overflow:hidden;
+  }
+  .s-thumb img{width:100%; height:100%; object-fit:cover;}
+  .s-thumb .s-tag{
+    position:absolute; top:14px; left:16px; z-index:2;
+    font-family:'Jost',sans-serif; color:var(--cream); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+    background:rgba(0,0,0,0.35); padding:6px 12px; border-radius:20px; backdrop-filter:blur(3px);
+  }
+  .s-body{padding:22px; flex:1; display:flex; flex-direction:column;}
+  .s-body h3{font-size:1.5rem; margin-bottom:10px;}
+  .s-body p{font-size:0.95rem; color:rgba(35,33,32,0.78); margin-bottom:14px; flex:1;}
+  .s-foot{display:flex; justify-content:space-between; align-items:center;}
+  .s-price{font-family:'Jost',sans-serif; font-size:0.82rem; font-weight:600; color:var(--terracotta);}
+  .s-book{font-family:'Jost',sans-serif; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase; border:1px solid var(--ink); padding:7px 14px; border-radius:20px;}
+  .s-book:hover{background:var(--ink); color:var(--cream);}
+
+  /* Ritual spotlight */
+  .ritual{max-width:1180px; margin:90px auto; padding:0 32px; display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center;}
+  .ritual-visual{
+    aspect-ratio:3/4; border-radius:8px; overflow:hidden;
+  }
+  .ritual-visual img{width:100%; height:100%; object-fit:cover;}
+  .ritual-text .eyebrow{margin-bottom:12px; display:block;}
+  .ritual-text h2{font-size:clamp(2.2rem,3.6vw,3rem); margin-bottom:20px;}
+  .ritual-list{list-style:none;}
+  .ritual-list li{
+    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--line); font-size:1rem;
+  }
+  .ritual-list li b{font-family:'Jost',sans-serif; color:var(--terracotta); min-width:20px;}
+  .ritual-cta{margin-top:22px; display:inline-block; background:var(--terracotta); color:var(--cream); padding:13px 26px; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.82rem; letter-spacing:0.05em; text-transform:uppercase;}
+
+  /* Testimonials */
+  .testimonials{background:var(--cream-deep); padding:70px 32px;}
+  .t-inner{max-width:1180px; margin:0 auto;}
+  .t-head{text-align:center; margin-bottom:40px;}
+  .t-head h2{font-size:clamp(2.1rem,3.4vw,2.8rem); margin-top:14px;}
+  .t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .t-card{background:var(--cream); padding:24px; border-radius:8px; border:1px solid var(--line);}
+  .stars{color:var(--terracotta); font-size:0.85rem; margin-bottom:10px;}
+  .t-card p{font-size:0.98rem; color:rgba(35,33,32,0.82); margin-bottom:14px;}
+  .t-name{font-family:'Jost',sans-serif; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--teal);}
+
+  /* FAQ */
+  .faq{max-width:1180px; margin:80px auto; padding:0 32px;}
+  .faq-head{text-align:center; margin-bottom:40px;}
+  .faq-head h2{font-size:clamp(2.1rem,3.4vw,2.8rem); margin-top:14px;}
+  .faq-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px 40px;}
+  .faq-item{border-bottom:1px solid var(--line); padding-bottom:18px;}
+  .faq-item summary{cursor:pointer; font-family:'Jost',sans-serif; font-size:1.02rem; font-weight:500; list-style:none; display:flex; justify-content:space-between;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+'; color:var(--terracotta);}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin-top:10px; font-size:0.98rem; color:rgba(35,33,32,0.78);}
+
+  /* Find Us */
+  .find-us{padding:90px 32px; max-width:1180px; margin:0 auto;}
+  .find-us-inner{display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:stretch;}
+  .map-embed{border-radius:8px; overflow:hidden; min-height:380px; border:1px solid var(--line);}
+  .find-us-copy{display:flex; flex-direction:column; justify-content:center;}
+  .find-us-copy h2{font-size:clamp(2rem,3.2vw,2.6rem); margin:14px 0 24px;}
+  .find-us-copy .visit-line{color:rgba(35,33,32,0.85); font-size:1rem; margin-bottom:14px;}
+  .find-us-copy .visit-line b{color:var(--terracotta); display:block; font-family:'Jost',sans-serif; font-size:0.75rem; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:4px;}
+  .find-us-copy .cta-primary{background:var(--terracotta); color:var(--cream); padding:15px 30px; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.85rem; letter-spacing:0.05em; text-transform:uppercase;}
+
+  /* Closing CTA */
+  .closing-cta{
+    max-width:1180px; margin:0 auto 80px; padding:70px 32px;
+    background:var(--ink); color:var(--cream); border-radius:8px;
+    text-align:center;
+  }
+  .closing-cta h2{font-size:clamp(2rem,3.4vw,2.8rem); margin-bottom:14px; color:var(--cream);}
+  .closing-cta p{color:rgba(250,246,239,0.85); font-size:1.05rem; margin-bottom:26px;}
+  .closing-cta .cta-primary{background:var(--terracotta); color:var(--cream); padding:15px 32px; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.88rem; letter-spacing:0.05em; text-transform:uppercase; display:inline-block;}
+
+  /* Footer */
+  footer{background:var(--cream-deep); padding:40px 32px; border-top:1px solid var(--line);}
+  .footer-inner{max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-brand{display:flex; align-items:center; gap:12px; font-size:0.82rem; color:rgba(35,33,32,0.6);}
+  .footer-brand img{width:34px; height:34px; border-radius:50%;}
+  .footer-links a{margin-left:18px; font-size:0.85rem;}
+
+  /* Sticky mobile-style booking bar */
+  .sticky-cta{
+    position:fixed; bottom:0; left:0; right:0; background:var(--ink); color:var(--cream);
+    padding:14px 32px; display:flex; justify-content:space-between; align-items:center; z-index:100;
+    box-shadow:0 -6px 20px rgba(0,0,0,0.15);
+  }
+  .sticky-cta span{font-family:'Jost',sans-serif; font-size:0.85rem; letter-spacing:0.02em;}
+  .sticky-cta a{background:var(--terracotta); padding:10px 22px; border-radius:4px; font-family:'Jost',sans-serif; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase;}
+
+  @media(max-width:900px){
+    .navlinks{display:none;}
+    .hero{min-height:auto; padding:90px 24px 60px;}
+    .booking-bar{grid-template-columns:1fr; gap:14px; padding:22px;}
+    .booking-field{border-right:none; border-bottom:1px solid var(--line); padding:0 0 12px;}
+    .booking-field:last-of-type{border-bottom:none; padding-bottom:0;}
+    .booking-bar button{padding:14px; margin-top:4px;}
+    .hero-trust{gap:16px 24px;}
+    .s-grid{grid-template-columns:1fr;}
+    .s-card.featured{grid-column:span 1;}
+    .ritual{grid-template-columns:1fr;}
+    .t-grid{grid-template-columns:1fr;}
+    .faq-grid{grid-template-columns:1fr;}
+    .find-us-inner{grid-template-columns:1fr;}
+    .map-embed{min-height:280px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <img src="images/logo.png" alt="Unique Moroccan Spa logo">
+    <div class="logo"><b>Unique</b> Moroccan Spa</div>
+  </div>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#ritual">Hammam</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit</a>
+  </div>
+  <a class="book-btn" href="#">Book Now</a>
+</nav>
+
+<div class="quicknav">
+  <a href="#services">🛁 Hammam — from $120</a>
+  <a href="#services">✨ Laser &amp; Skin — from $60</a>
+  <a href="#services">💆 Head Spa — from $80</a>
+  <a href="#services">💇 Hair Salon — from $50</a>
+  <a href="#services">📿 Jewellery — from $40</a>
+  <a href="#services">🥤 Smoothie Bar — from $9</a>
+</div>
+
+<section class="hero">
+  <img class="hero-media" src="images/hero-hammam.jpg" alt="Private Moroccan hammam room with candlelight">
+
+  <div class="hero-content">
+    <span class="eyebrow">Sydney Beauty Clinic &amp; Moroccan Spa</span>
+    <h1>A Moroccan Ritual, A Sydney Address</h1>
+    <p>Private treatment rooms, female-owned and operated, in the heart of Revesby — hammam, laser, head spa, hair, jewellery and more, all under one roof.</p>
+  </div>
+
+  <div class="booking-bar">
+    <div class="booking-field">
+      <label>Service</label>
+      <select><option>Choose a service</option><option>Moroccan Hammam</option><option>Laser &amp; Skin</option><option>Japanese Head Spa</option><option>Hair Salon</option><option>Permanent Jewellery</option></select>
+    </div>
+    <div class="booking-field">
+      <label>Date</label>
+      <input type="date">
+    </div>
+    <div class="booking-field">
+      <label>Guests</label>
+      <select><option>1 person</option><option>2 people</option><option>3+ people</option></select>
+    </div>
+    <button>Find a Time →</button>
+  </div>
+
+  <div class="hero-trust">
+    <div><span class="dot"></span> Private Treatment Rooms</div>
+    <div><span class="dot"></span> Female-Owned &amp; Operated</div>
+    <div><span class="dot"></span> Walk-ins Welcome</div>
+    <div><span class="dot"></span> 18 Selems Parade, Revesby</div>
+  </div>
+</section>
+
+<section class="intro">
+  <p>Unique Moroccan Spa &amp; Beauty Clinic is a private, female-owned space in Revesby where traditional ritual meets modern care — a full self-care day under one roof, from steam room to salon chair.</p>
+</section>
+
+<section class="services" id="services">
+  <div class="services-head">
+    <span class="eyebrow">What We Offer</span>
+    <h2>Six ways to be looked after</h2>
+  </div>
+  <div class="s-grid">
+    <div class="s-card featured">
+      <div class="s-thumb">
+        <span class="s-tag">Signature Service</span>
+        <img src="images/service-hammam.jpg" alt="Moroccan Hammam ritual ingredients — black soap, kessa mitt, rhassoul clay, argan oil">
+      </div>
+      <div class="s-body">
+        <h3>Moroccan Hammam Ritual</h3>
+        <p>Steam, black soap, exfoliation and mask — the full traditional bathhouse experience in a private room.</p>
+        <div class="s-foot"><span class="s-price">From $120</span><a class="s-book" href="#ritual">View Ritual</a></div>
+      </div>
+    </div>
+    <div class="s-card">
+      <div class="s-thumb">
+        <span class="s-tag">Clinic</span>
+        <img src="images/service-clinic.jpg" alt="Laser and skin clinic treatment room">
+      </div>
+      <div class="s-body">
+        <h3>Laser &amp; Skin Clinic</h3>
+        <p>Clinical skin and laser treatments in a calm, private setting.</p>
+        <div class="s-foot"><span class="s-price">From $60</span><a class="s-book" href="#">Book</a></div>
+      </div>
+    </div>
+    <div class="s-card">
+      <div class="s-thumb">
+        <span class="s-tag">Wellness</span>
+        <img src="images/service-headspa.jpg" alt="Japanese head spa scalp treatment">
+      </div>
+      <div class="s-body">
+        <h3>Japanese Head Spa</h3>
+        <p>Scalp massage and deep-conditioning hair treatment.</p>
+        <div class="s-foot"><span class="s-price">From $80</span><a class="s-book" href="#">Book</a></div>
+      </div>
+    </div>
+    <div class="s-card">
+      <div class="s-thumb">
+        <span class="s-tag">Salon</span>
+        <img src="images/service-hairsalon.jpg" alt="Hair salon styling and blow-dry">
+      </div>
+      <div class="s-body">
+        <h3>Hair Salon</h3>
+        <p>Cut, colour and styling from our newly expanded salon floor.</p>
+        <div class="s-foot"><span class="s-price">From $50</span><a class="s-book" href="#">Book</a></div>
+      </div>
+    </div>
+    <div class="s-card">
+      <div class="s-thumb">
+        <span class="s-tag">New</span>
+        <img src="images/service-jewellery.jpg" alt="Permanent jewellery fine chains in gold and silver">
+      </div>
+      <div class="s-body">
+        <h3>Permanent Jewellery</h3>
+        <p>A dainty welded chain, fitted in minutes.</p>
+        <div class="s-foot"><span class="s-price">From $40</span><a class="s-book" href="#">Book</a></div>
+      </div>
+    </div>
+    <div class="s-card">
+      <div class="s-thumb">
+        <span class="s-tag">Refresh</span>
+        <img src="images/service-smoothie.jpg" alt="Fresh smoothies at the smoothie bar">
+      </div>
+      <div class="s-body">
+        <h3>Smoothie Bar</h3>
+        <p>A fresh smoothie to finish off your visit.</p>
+        <div class="s-foot"><span class="s-price">From $9</span><a class="s-book" href="#">View Menu</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ritual" id="ritual">
+  <div class="ritual-visual">
+    <img src="images/ritual-room.jpg" alt="Private hammam room with steam and candlelight">
+  </div>
+  <div class="ritual-text">
+    <span class="eyebrow">The Signature Experience</span>
+    <h2>Inside the Hammam Ritual</h2>
+    <ul class="ritual-list">
+      <li><b>01</b> Steam room opens the pores and eases you in.</li>
+      <li><b>02</b> Traditional black soap applied warm, full body.</li>
+      <li><b>03</b> Exfoliation with a kessa glove, deep and thorough.</li>
+      <li><b>04</b> Argan oil body mask, then a warm water rinse.</li>
+      <li><b>05</b> Leave with softer skin and a genuinely slower pulse.</li>
+    </ul>
+    <a class="ritual-cta" href="#">Book the Hammam</a>
+  </div>
+</section>
+
+<section class="testimonials" id="reviews">
+  <div class="t-inner">
+    <div class="t-head">
+      <span class="eyebrow">In Their Words</span>
+      <h2>What visitors are saying</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"Felt completely private the whole time — didn't expect to relax this much on a weekday afternoon."</p>
+        <div class="t-name">Google Review</div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"The hammam alone is worth the trip. Added the head spa after and made a full afternoon of it."</p>
+        <div class="t-name">Instagram Comment</div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"Brought my sister for her birthday — felt like an occasion, not just an appointment."</p>
+        <div class="t-name">Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq-head">
+    <span class="eyebrow">Before You Book</span>
+    <h2>Good to know</h2>
+  </div>
+  <div class="faq-grid">
+    <details class="faq-item" open><summary>Is the space private?</summary><p>Yes — individual rooms, no shared bookings, female-owned and operated throughout.</p></details>
+    <details class="faq-item"><summary>Do I need to book ahead?</summary><p>Recommended, especially for the Hammam and weekends. Walk-ins welcome subject to availability.</p></details>
+    <details class="faq-item"><summary>Can I bring a friend?</summary><p>Yes — group bookings welcome for birthdays, hens' days and girls' days out.</p></details>
+    <details class="faq-item"><summary>Is parking available?</summary><p>Street parking is available on and around Selems Parade, Revesby.</p></details>
+  </div>
+</section>
+
+<section class="find-us" id="visit">
+  <div class="find-us-inner">
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps?q=18+Selems+Parade,+Revesby+NSW+2212,+Australia&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Unique Moroccan Spa location map">
+      </iframe>
+    </div>
+    <div class="find-us-copy">
+      <span class="eyebrow">Find Us</span>
+      <h2>Visit the spa</h2>
+      <div class="visit-line"><b>Address</b>18 Selems Parade, Revesby NSW 2212</div>
+      <div class="visit-line"><b>Hours</b>Tue–Sat 9am–6pm, Sun 10am–4pm, Mon closed</div>
+      <div class="visit-line"><b>Parking</b>Street parking on and around Selems Parade</div>
+      <a class="cta-primary" href="#" style="display:inline-block; margin-top:20px;">Book Your Visit</a>
+    </div>
+  </div>
+</section>
+
+<section class="closing-cta">
+  <h2>Ready for your ritual?</h2>
+  <p>Book online in under a minute, or message us on Instagram if you've got questions first.</p>
+  <a class="cta-primary" href="#">Book Your Visit</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Unique Moroccan Spa logo">
+      <span>© 2026 Unique Moroccan Spa &amp; Beauty Clinic</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Book Now</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <span>Ready for your ritual?</span>
+  <a href="#">Book Now</a>
+</div>
+
+</body>
+</html>
